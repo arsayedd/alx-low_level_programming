@@ -1,18 +1,20 @@
 #include <stdio.h>
 /**
- *main - prints count of multiples
- *of 3 or 5 below 1024
+ *main - prints sum of even fibonacci
+ *suit elements
+ *fibonacci suit numbers
  *Return: return 0
 */
 int main(void)
 {
-int n, sum = 0;
-for (n = 0; n < 1024; n++)
+unsigned long n1 = 0, n2 = 1, n3 = 0, sum = 0;
+while (n3 <= 4000000)
 {
-if ((n % 3) == 0 || (n % 5) == 0)
-sum += n;
+n3 = n1 + n2;
+n1 = n2;
+n2 = n3;
+if ((n1 % 2) == 0)
+sum += n1;
 }
-printf("%d\n", sum);
+printf("%ld\n", sum);
 return (0);
-}
-
